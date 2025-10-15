@@ -25,7 +25,6 @@ export const Slide07InvestmentTerms = {
                   <div>Replaces previous SAFE structure.</div>
                   <ul className="space-y-1">
                     <li>• 12% annual interest, paid quarterly.</li>
-                    <li>• Negotiable up to 15% based on investor counteroffer.</li>
                     <li>• Optional equity participation if mutually agreed.</li>
                   </ul>
                 </div>
