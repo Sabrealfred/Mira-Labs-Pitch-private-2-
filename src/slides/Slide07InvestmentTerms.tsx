@@ -1,79 +1,51 @@
 export const Slide07InvestmentTerms = {
   type: 'content',
   title: 'Investment Structure',
-  subtitle: 'Two flexible options aligned to institutional capital preferences',
+  subtitle: 'Structured capital solution aligning yield, protection, and upside',
   content: (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm md:text-base">
-        <div className="border border-slate-300">
-          <div className="bg-slate-900 text-white p-4">
-            <div className="text-sm uppercase tracking-wide text-slate-400 mb-1">Option 1</div>
-            <h3 className="text-lg font-semibold">Hybrid Equity + AUM</h3>
-          </div>
-          <div className="p-5 space-y-3">
-            <div>
-              <div className="text-2xl font-light text-slate-900 mb-1">$5M</div>
-              <div className="text-sm text-slate-600">Total Commitment</div>
-            </div>
-            <div className="pt-4 border-t border-slate-200">
-              <div className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2">Structure</div>
-              <div className="space-y-3 text-sm md:text-base">
-                <div className="bg-blue-50 p-3 space-y-2">
-                  <div className="font-semibold text-blue-900 mb-1">$2M SAFE</div>
-                  <ul className="space-y-1 text-slate-700 text-sm md:text-base">
-                    <li>• $18M pre-money cap</li>
-                    <li>• 20% discount to next institutional round</li>
-                    <li>• MFN, pro-rata, information rights</li>
-                  </ul>
-                </div>
-                <div className="bg-green-50 p-3 space-y-2">
-                  <div className="font-semibold text-green-900 mb-1">$3M AUM Allocation</div>
-                  <ul className="space-y-1 text-slate-700 text-sm md:text-base">
-                    <li>• 1.5% management / 35% performance fee</li>
-                    <li>• 18-month management fee rebate (cap $67.5K)</li>
-                    <li>• Monthly liquidity (30-day notice)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="pt-4 border-t border-slate-200">
-              <div className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2">Investor Profile</div>
-              <div className="text-sm md:text-base text-slate-700 leading-relaxed">Balanced equity upside with direct exposure to baseline cash flows</div>
-            </div>
-          </div>
+      <div className="border border-slate-300">
+        <div className="bg-slate-900 text-white p-4">
+          <h3 className="text-lg font-semibold">Structured Loan + AUM Allocation</h3>
         </div>
-
-        <div className="border border-slate-300">
-          <div className="bg-slate-900 text-white p-4">
-            <div className="text-sm uppercase tracking-wide text-slate-400 mb-1">Option 2</div>
-            <h3 className="text-lg font-semibold">Pure Equity</h3>
+        <div className="p-5 space-y-5 text-sm md:text-base">
+          <div>
+            <div className="text-2xl font-light text-slate-900 mb-1">$5M</div>
+            <div className="text-sm text-slate-600 uppercase tracking-wide">Total Commitment</div>
           </div>
-          <div className="p-5 space-y-3">
-            <div>
-              <div className="text-2xl font-light text-slate-900 mb-1">$5M</div>
-              <div className="text-sm text-slate-600">Total Commitment</div>
+          <div className="border border-slate-200 rounded-md overflow-hidden">
+            <div className="bg-slate-100 grid grid-cols-1 md:grid-cols-3 gap-2 p-3 text-xs md:text-sm font-semibold uppercase tracking-wide text-slate-600">
+              <div className="md:col-span-1">Component</div>
+              <div className="md:col-span-2">Description</div>
             </div>
-            <div className="pt-4 border-t border-slate-200">
-              <div className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2">Structure</div>
-              <div className="space-y-3 text-sm md:text-base">
-                <div className="bg-purple-50 p-3 space-y-2">
-                  <div className="font-semibold text-purple-900 mb-1">$5M SAFE</div>
-                  <ul className="space-y-1 text-slate-700 text-sm md:text-base">
-                    <li>• $18M pre-money cap</li>
-                    <li>• 20% discount</li>
-                    <li>• MFN, pro-rata, and information rights</li>
-                    <li>• Board observer seat</li>
+            <div className="divide-y divide-slate-200">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
+                <div className="font-semibold text-slate-900">$2M Secured Loan</div>
+                <div className="md:col-span-2 space-y-2 text-slate-700">
+                  <div>Replaces previous SAFE structure.</div>
+                  <ul className="space-y-1">
+                    <li>• 12% annual interest, paid quarterly.</li>
+                    <li>• Negotiable up to 15% based on investor counteroffer.</li>
+                    <li>• Optional equity participation if mutually agreed.</li>
                   </ul>
                 </div>
-                <div className="bg-slate-100 p-3 space-y-2">
-                  <div className="font-semibold text-slate-900 mb-1">No AUM Exposure</div>
-                  <div className="text-sm md:text-base text-slate-700 leading-relaxed">Maximizes participation in enterprise value creation</div>
-                </div>
               </div>
-            </div>
-            <div className="pt-4 border-t border-slate-200">
-              <div className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-2">Investor Profile</div>
-              <div className="text-sm md:text-base text-slate-700 leading-relaxed">Investors prioritizing equity multiple and Series A/B follow-on rights</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
+                <div className="font-semibold text-slate-900">Tenor</div>
+                <div className="md:col-span-2 text-slate-700">18–24 months with bullet repayment or early conversion to equity.</div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
+                <div className="font-semibold text-slate-900">Collateral / Guarantee</div>
+                <div className="md:col-span-2 text-slate-700">Backed by corporate assets and/or AUM cash flows (supplemental detail provided in annex).</div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
+                <div className="font-semibold text-slate-900">Covenants</div>
+                <div className="md:col-span-2 text-slate-700">Standard investor protections including no new senior debt, cross-default clauses, and quarterly reporting.</div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
+                <div className="font-semibold text-slate-900">Governance Rights</div>
+                <div className="md:col-span-2 text-slate-700">MFN and information rights, optional board observer seat, quarterly updates.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -87,8 +59,8 @@ export const Slide07InvestmentTerms = {
           <div>
             <div className="font-semibold text-slate-900 mb-1">Governance</div>
             <ul className="space-y-1">
-              <li>• MFN + pro-rata rights across both options</li>
-              <li>• Board observer seat (Option 2) / quarterly reporting (Option 1)</li>
+              <li>• MFN and information rights built into loan documentation</li>
+              <li>• Optional board observer seat with quarterly reporting package</li>
               <li>• Protective provisions on additional debt and related-party transactions</li>
             </ul>
           </div>
@@ -103,9 +75,9 @@ export const Slide07InvestmentTerms = {
           <div>
             <div className="font-semibold text-slate-900 mb-1">Follow-On Access</div>
             <ul className="space-y-1">
-              <li>• Post-close SAFE reference cap increases to $25M for new checks</li>
-              <li>• Option holders receive right of first offer on co-invest SMA allocations</li>
-              <li>• Performance sharing triggers after Series A to reward early capital</li>
+              <li>• Lenders receive right of first offer on co-invest SMA allocations</li>
+              <li>• Optional equity participation via negotiated conversion terms</li>
+              <li>• Performance sharing triggers post-Series A to reward early capital</li>
             </ul>
           </div>
         </div>
@@ -151,13 +123,13 @@ export const Slide07InvestmentTerms = {
       <div className="bg-slate-900 text-white p-6">
         <div className="flex justify-between items-center">
           <div>
-            <div className="text-base font-semibold mb-1">Post-Close Reference Cap</div>
-            <div className="text-sm text-slate-400">New SAFEs issued after SRO acquisition close</div>
+            <div className="text-base font-semibold mb-1">Equity Conversion Reference</div>
+            <div className="text-sm text-slate-400">Guidance for optional conversion or equity kicker discussions</div>
           </div>
           <div className="text-3xl font-light">$25M</div>
         </div>
         <div className="text-sm text-slate-400 mt-3 space-y-1">
-          <div>Post-close cap protects early investors by raising the valuation floor once regulatory transfer is complete.</div>
+          <div>Reference valuation for any negotiated equity participation once regulatory transfer is complete.</div>
           <div>Target Series A timing: 18-24 months post-close, Q2-Q3 2027 target (subject to track record milestones outlined above).</div>
         </div>
       </div>
