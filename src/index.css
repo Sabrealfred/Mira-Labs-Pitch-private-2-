@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Responsive table wrapper */
+@layer utilities {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-responsive table {
+    min-width: 600px;
+  }
+}
+
+/* Optimize text sizes for print/presentation */
+@layer components {
+  .text-xs {
+    font-size: 0.7rem !important;
+    line-height: 1.1rem !important;
+  }
+
+  .text-sm {
+    font-size: 0.8rem !important;
+    line-height: 1.3rem !important;
+  }
+
+  .text-base {
+    font-size: 0.9rem !important;
+    line-height: 1.4rem !important;
+  }
+
+  .text-lg {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .text-xl {
+    font-size: 1.1rem !important;
+    line-height: 1.6rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.3rem !important;
+    line-height: 1.8rem !important;
+  }
+}
+
+/* Compact spacing for presentation mode */
+.space-y-8 > * + * {
+  margin-top: 1rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 0.75rem !important;
+}
+
+.space-y-4 > * + * {
+  margin-top: 0.5rem !important;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.35rem !important;
+}
+
+.gap-8 {
+  gap: 0.85rem !important;
+}
+
+.gap-6 {
+  gap: 0.65rem !important;
+}
+
+.gap-4 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 0.4rem !important;
+}
+
+.p-6 {
+  padding: 0.75rem !important;
+}
+
+.p-8 {
+  padding: 0.85rem !important;
+}
+
+.py-8 {
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+}
+
+.px-8 {
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
+}
+
+.p-4 {
+  padding: 0.6rem !important;
+}
+
+.py-4 {
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+.px-4 {
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+}
+
+.p-3 {
+  padding: 0.4rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 0.75rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 0.5rem !important;
+}
+
+#slide-capture.export-mode {
+  width: 1920px !important;
+  height: 1080px !important;
+  overflow: visible !important;
+  background: #ffffff !important;
+}
+
+#slide-capture.export-mode .export-scroll {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Compact table cells */
+table td, table th {
+  padding: 0.4rem 0.5rem !important;
+}
+
+/* Print styles for PPT export */
+@media print {
+  body {
+    font-size: 10px;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  .overflow-y-auto {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  button, nav, .no-print {
+    display: none !important;
+  }
+
+  /* Ensure backgrounds and colors print correctly */
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Prevent page breaks within slides */
+  .slide-content {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Force page break between slides */
+  .slide-container {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Ensure charts and images render properly */
+  svg, canvas, img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure tables don't break */
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Hide navigation controls */
+  .bg-slate-900:last-child {
+    display: none !important;
+  }
+
+  /* Scale down content to fit in one page */
+  .flex-1 > div {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+
+  /* Ensure grid layouts don't break */
+  .grid {
+    page-break-inside: avoid;
+  }
+}
+
+/* Better rendering for PDF export */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure crisp text in exports */
+body {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Prevent blur on transforms */
+.slide-content {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .grid-cols-5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
