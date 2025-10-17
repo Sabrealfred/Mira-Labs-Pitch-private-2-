@@ -274,6 +274,70 @@ body {
 
 /* Mobile optimizations */
 @media (max-width: 640px) {
+  /* Increase base font size for better mobile readability */
+  body {
+    font-size: 16px !important;
+  }
+
+  /* Fix for mobile browser address bar hiding */
+  #root {
+    height: 100dvh; /* Use dynamic viewport height */
+    min-height: -webkit-fill-available;
+  }
+
+  /* Ensure navigation bar is always visible */
+  .bg-slate-900.border-t {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 50 !important;
+  }
+
+  /* Larger text sizes for mobile */
+  .text-xs {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+
+  .text-sm {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .text-base {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .text-lg {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .text-xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+
+  .text-3xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
+
+  /* Better padding for touch targets */
+  .p-4 {
+    padding: 1rem !important;
+  }
+
+  .p-6 {
+    padding: 1.25rem !important;
+  }
+
+  /* Grid adjustments */
   .grid-cols-4 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -288,5 +352,14 @@ body {
 
   .grid-cols-5 {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Better spacing for mobile */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem !important;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 1.25rem !important;
   }
 }
