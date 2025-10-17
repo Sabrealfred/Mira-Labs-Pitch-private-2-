@@ -294,7 +294,22 @@ body {
 
   /* Increase top padding for mobile to prevent header overlap */
   .pt-20 {
-    padding-top: 6rem !important;
+    padding-top: 7rem !important;
+  }
+
+  /* Ensure header stays on top */
+  .absolute.top-0.bg-slate-900 {
+    z-index: 40 !important;
+  }
+
+  /* Reduce top margin of first elements to prevent overlap */
+  .slide-content > * {
+    margin-top: 0 !important;
+  }
+
+  .slide-content > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0.5rem !important;
   }
 
   /* Larger text sizes for mobile */
