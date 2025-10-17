@@ -292,6 +292,11 @@ body {
     z-index: 50 !important;
   }
 
+  /* Increase top padding for mobile to prevent header overlap */
+  .pt-20 {
+    padding-top: 6rem !important;
+  }
+
   /* Larger text sizes for mobile */
   .text-xs {
     font-size: 0.875rem !important;
